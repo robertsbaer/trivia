@@ -1,2 +1,11 @@
 body{
+	text-align: center;
+	font-family: sans-serif;
+}
+
+#gameboard{
+	width: 600px;
+	height: auto;
+	margin: auto;
+	background-color: rosybrown;
 }
