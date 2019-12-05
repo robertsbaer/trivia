@@ -1,45 +1,74 @@
-//triva app
-
-//create questions
-//generate them with an API
-
-//how many questions to answer
-
-//how many correct answers
-//how many wrong answers
-
-//create game play
 
 
-// Create API 
+let round = [
+	{ 
+		question:"By French law, no drink may be sold as wine that is not exclusively made from these",
+		answer: "grapes"
+	},
+	{
+		question: "As far back as 1609, sacramental wine was made in what is now this state",
+		answer: "California"
+	},
+	{
+		question: "Before experiments of this 19th century scientist, fermentation was basically a mystery",
+		answer: "Pasteur"
+	},
+	{
+		question: "This term means that extra alcohol has been added, as to sherry, for example",
+		answer: "Fortified"
+	},
+	{
+		question: "In the U.S., wines using at least 51% of a certain grape are labeled this",
+		answer: "Varietal"
+	}
+];
 
-//const url = "http://jservice.io/api/category?id=233"
 
-const url = "http://jservice.io/api/category?id=233";
-fetch(url).then(response => {
-	console.log(response)
-	return response.json()
-}) 
-	.then(JSON => {
-	document.querySelector('#thequestions0').innerHTML = JSON.clues[0].question;
-	document.querySelector('#thequestions1').innerHTML = JSON.clues[1].question;
-	document.querySelector('#thequestions2').innerHTML = JSON.clues[2].question;
-	document.querySelector('#thequestions3').innerHTML = JSON.clues[3].question;
-	document.querySelector('#thequestions4').innerHTML = JSON.clues[4].question;
-	document.querySelector('#thequestions5').innerHTML = JSON.clues[5].question;
-	document.querySelector('#thequestions6').innerHTML = JSON.clues[6].question;
-	document.querySelector('#thequestions7').innerHTML = JSON.clues[7].question;
-	document.querySelector('#thequestions8').innerHTML = JSON.clues[8].question;
-	document.querySelector('#thequestions9').innerHTML = JSON.clues[9].question;
+for(i = 0; i < round.length; i++) {
+	const questions = document.querySelector("#thequestions")
+	const answers = document.querySelector("#theanswers")
+	const reveal = document.querySelector('#reveal')
+	const revealQuestion = document.querySelector('.value')
+	const bothQA = [].concat(questions, answers)
+	console.log(round)
 	
-	document.querySelector('#theanswers0').innerHTML = JSON.clues[0].answer;
-	document.querySelector('#theanswers1').innerHTML = JSON.clues[1].answer;
-	document.querySelector('#theanswers2').innerHTML = JSON.clues[2].answer;
-	document.querySelector('#theanswers3').innerHTML = JSON.clues[3].answer;
-	document.querySelector('#theanswers4').innerHTML = JSON.clues[4].answer;
-	document.querySelector('#theanswers5').innerHTML = JSON.clues[5].answer;
-	document.querySelector('#theanswers6').innerHTML = JSON.clues[6].answer;
-	document.querySelector('#theanswers7').innerHTML = JSON.clues[7].answer;
-	document.querySelector('#theanswers8').innerHTML = JSON.clues[8].answer;
-	document.querySelector('#theanswers9').innerHTML = JSON.clues[9].answer;
-});
+	bothQA.innerHTML = reveal
+	
+	questions.innerHTML =  round[i].question
+	answers.innerHTML =  "What is" + ' ' + round[i].answer
+	
+	reveal.addEventListener('click', function(evt){
+		revealQuestion.style.display = "none",
+		evt.preventDefault()
+	})
+	
+	reveal.addEventListener('click', function(evt){
+		questions.style.display = "block",
+		evt.preventDefault()
+	})
+	
+	questions.addEventListener('click', function(evt){
+		answers.style.display = "block"
+		questions.style.display = "none"
+		evt.preventDefault()
+	})
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
