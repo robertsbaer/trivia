@@ -1,15 +1,12 @@
 
-const reveal = document.querySelector('#reveal')
-const revealQuestion = document.querySelector('#question-0')
-const revealAnswer = document.querySelector('#answer-0')
+//const reveal = document.querySelector('#reveal')
+//const revealQuestion = document.querySelector('#question-0')
+//const revealAnswer = document.querySelector('#answer-0')
+//
+//const amount = document.querySelector('#value-0')
 
-const amount = document.querySelector('#value-0')
 
-
-function myArray() {
-
-	var arr1 = [];
-	arr1 = [
+var questions = [
 		{ 
 			question:"By French law, no drink may be sold as wine that is not exclusively made from these",
 			answer: "grapes"
@@ -30,44 +27,62 @@ function myArray() {
 			question: "In the U.S., wines using at least 51% of a certain grape are labeled this",
 			answer: "Varietal"
 		}
-	];
+	]
 
-	var portion = 1;
+const categories = document.querySelectorAll(".gameboard .category")
+const pottenCategory = categories[0]
 
-	for (i = 0; i < arr1.length / portion; i++) {
-		for (j = 0; j < portion; j++) {
-			document.getElementById('question-'+i).innerHTML +=
-				arr1[i*portion+j].question;
-			document.getElementById('answer-'+i).innerHTML +=
-				arr1[i*portion+j].answer;
+const pottenReveal = pottenCategory.querySelectorAll(".reveal")
 
-			reveal.addEventListener('click', function(evt){
-				evt.preventDefault()
-				revealQuestion.style.display = "block"
-			});
-		}
-		revealQuestion.addEventListener('click', function(evt){
-				evt.preventDefault()
-				revealAnswer.style.display = "block"
-			})
+function renderElements() {
+
+//	var portion = 1;
+	
+	
+	
+	for (let i = 0; i < pottenReveal.length; i++) {
+//	for (let i = 0; i < 1; i++) {
+		const reveal = pottenReveal[i]
+		const revealQuestion = reveal.querySelector(".question")
+		const revealAnswer = reveal.querySelector(".answer")
+		const question = questions[i]
+		
+		console.log(reveal)
+		
+		revealQuestion.innerText = question.question
+		revealAnswer.innerText = question.answer
+		
+		reveal.addEventListener("click", evt => {
+			revealQuestion.style.display = "block"
+		})
+		
+		revealQuestion.addEventListener("click", evt => {
+			revealAnswer.style.display = "block"
+		})
 	}
+
+//	for (i = 0; i < arr1.length / portion; i++) {
+//		for (j = 0; j < portion; j++) {
+//			document.getElementById('question-'+i).innerHTML +=
+//				arr1[i*portion+j].question;
+//			document.getElementById('answer-'+i).innerHTML +=
+//				arr1[i*portion+j].answer;
+//
+//			reveal.addEventListener('click', function(evt){
+//				evt.preventDefault()
+//				revealQuestion.style.display = "block"
+//			});
+//		}
+//		revealQuestion.addEventListener('click', function(evt){
+//				evt.preventDefault()
+//				revealAnswer.style.display = "block"
+//			})
+//	}
+
+	
+	
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+renderElements()

@@ -43,7 +43,7 @@ body{
 
 
 
-#gameboard{
+.gameboard{
 	width: 100%;
 	height: auto;
 	margin: auto;
@@ -59,86 +59,43 @@ body{
 	margin: auto;
 }
 
+/*
 .category:hover{
 	width: 500px;
 	transition: width .5s;
 	background-color: rgba(14,37,162,1);
 }
-
-#reveal{
+*/
+.reveal{
 	width: 100%;
 	height: auto;
 	background-color: rgba(14,37,162,1);
 	display: block;
 }
 
+/*
 #reveal:hover{
 	background-color: rgba(14,37,162,1);
 	background-size: cover;
 	transition: font-size .4s;
 	font-size: 50px;
 }
+*/
 
 
-#question-0{
+.question{
 	color: white;
 	background-color: rgba(14,37,162,1);
 	display: none;
 }
 
-#answer-0{
+.answer{
 	color: orange;
 	font-size: 30px;
 	display: none;
 }
 
-#question-1{
-	color: white;
-	background-color: rgba(14,37,162,1);
-	display: none;
-}
 
-#answer-1{
-	color: orange;
-	font-size: 30px;
-	display: none;
-}
-
-#question-2{
-	color: white;
-	background-color: rgba(14,37,162,1);
-	display: none;
-}
-
-#answer-2{
-	color: orange;
-	font-size: 30px;
-	display: none;
-}
-
-#question-3{
-	color: white;
-	background-color: rgba(14,37,162,1);
-	display: none;
-}
-
-#answer-3{
-	color: orange;
-	font-size: 30px;
-	display: none;
-}
-
-#question-4{
-	color: white;
-	background-color: rgba(14,37,162,1);
-	display: none;
-}
-
-#answer-4{
-	color: orange;
-	font-size: 30px;
-	display: none;
-}
 
 
 
