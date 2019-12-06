@@ -9,10 +9,11 @@ body{
 
 .catHeader{
 	display: flex;
-	flex-direction: row;
+	
 }
 
 #cat{
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: #1024a2;
@@ -23,7 +24,19 @@ body{
 	border: 2px solid black;
 }
 
-.value{
+.value-0{
+	color: orange;;
+	font-size: 40px;
+}.value-1{
+	color: orange;;
+	font-size: 40px;
+}.value-2{
+	color: orange;;
+	font-size: 40px;
+}.value-3{
+	color: orange;;
+	font-size: 40px;
+}.value-4{
 	color: orange;;
 	font-size: 40px;
 }
@@ -67,16 +80,64 @@ body{
 }
 
 
-#thequestions{
+#question-0{
 	color: white;
 	background-color: rgba(14,37,162,1);
 	display: none;
 }
 
-#theanswers{
-	display: none;
+#answer-0{
 	color: orange;
 	font-size: 30px;
+	display: none;
+}
+
+#question-1{
+	color: white;
+	background-color: rgba(14,37,162,1);
+	display: none;
+}
+
+#answer-1{
+	color: orange;
+	font-size: 30px;
+	display: none;
+}
+
+#question-2{
+	color: white;
+	background-color: rgba(14,37,162,1);
+	display: none;
+}
+
+#answer-2{
+	color: orange;
+	font-size: 30px;
+	display: none;
+}
+
+#question-3{
+	color: white;
+	background-color: rgba(14,37,162,1);
+	display: none;
+}
+
+#answer-3{
+	color: orange;
+	font-size: 30px;
+	display: none;
+}
+
+#question-4{
+	color: white;
+	background-color: rgba(14,37,162,1);
+	display: none;
+}
+
+#answer-4{
+	color: orange;
+	font-size: 30px;
+	display: none;
 }
 
 
