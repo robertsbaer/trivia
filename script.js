@@ -54,47 +54,47 @@ var questionsBeer = [
 
 var questionsSpirits = [
 	{ 
-		question:"By French law, no drink may be sold as wine that is not exclusively made from these",
-		answer: "grapes"
+		question:"popular in France in the 19th century, was legendary for its potent strength and characteristic green color.",
+		answer: "Absinthe"
 	},
 	{
-		question: "As far back as 1609, sacramental wine was made in what is now this state",
-		answer: "California"
+		question: "Beefeater and Bombay Sapphire are two brands of this spirit",
+		answer: "Gin"
 	},
 	{
-		question: "Before experiments of this 19th century scientist, fermentation was basically a mystery",
-		answer: "Pasteur"
+		question: "If a spirit was 100 proof, what would its alcoholic percentage be?",
+		answer: "50%"
 	},
 	{
-		question: "This term means that extra alcohol has been added, as to sherry, for example",
-		answer: "Fortified"
+		question: "American spirit made from aging corn whiskey in charred casks",
+		answer: "Bourbon"
 	},
 	{
-		question: "In the U.S., wines using at least 51% of a certain grape are labeled this",
-		answer: "Varietal"
+		question: "Cactus-like plant used for Tequila ",
+		answer: "Agave"
 	}
 ]
 
 var questionsFood = [
 	{ 
-		question:"By French law, no drink may be sold as wine that is not exclusively made from these",
-		answer: "grapes"
+		question:"These are two systems to pair wine and food",
+		answer: "Congruent & Complementary"
 	},
 	{
-		question: "As far back as 1609, sacramental wine was made in what is now this state",
-		answer: "California"
+		question: "This Varietal pairs the best with duck breast",
+		answer: "Pinot Noir"
 	},
 	{
-		question: "Before experiments of this 19th century scientist, fermentation was basically a mystery",
-		answer: "Pasteur"
+		question: "This saying is describing which wine type 'If it swims – Fino. If it flies – Amontillado. If it runs – Oloroso.'",
+		answer: "Sherry"
 	},
 	{
-		question: "This term means that extra alcohol has been added, as to sherry, for example",
-		answer: "Fortified"
+		question: "This dessert wine is the highest rated in its category",
+		answer: "Chateau d'Yquem"
 	},
 	{
-		question: "In the U.S., wines using at least 51% of a certain grape are labeled this",
-		answer: "Varietal"
+		question: "This pairs well with oysters",
+		answer: "Chablis"
 	}
 ]
 
@@ -122,9 +122,22 @@ var questionsPrice = [
 ]
 
 const categories = document.querySelectorAll(".gameboard .category")
+const categories1 = document.querySelectorAll(".gameboard1 .category")
+const categories2 = document.querySelectorAll(".gameboard2 .category")
+const categories3 = document.querySelectorAll(".gameboard3 .category")
+const categories4 = document.querySelectorAll(".gameboard4 .category")
+
 const pottenCategory = categories[0]
+const pottenCategory1 = categories1[0]
+const pottenCategory2 = categories2[0]
+const pottenCategory3 = categories3[0]
+const pottenCategory4 = categories4[0]
 
 const pottenReveal = pottenCategory.querySelectorAll(".reveal")
+const pottenReveal1 = pottenCategory1.querySelectorAll(".reveal")
+const pottenReveal2 = pottenCategory2.querySelectorAll(".reveal")
+const pottenReveal3 = pottenCategory3.querySelectorAll(".reveal")
+const pottenReveal4 = pottenCategory4.querySelectorAll(".reveal")
 
 function renderElementsWine() {
 	for (let i = 0; i < pottenReveal.length; i++) {
@@ -149,9 +162,9 @@ function renderElementsWine() {
 }
 
 function renderElementsBeer() {
-	for (let i = 0; i < pottenReveal.length; i++) {
+	for (let i = 0; i < pottenReveal1.length; i++) {
 		//	for (let i = 0; i < 1; i++) {
-		const reveal = pottenReveal[i]
+		const reveal = pottenReveal1[i]
 		const revealQuestion = reveal.querySelector(".question")
 		const revealAnswer = reveal.querySelector(".answer")
 		const question = questionsBeer[i]
@@ -171,9 +184,9 @@ function renderElementsBeer() {
 }
 
 function renderElementsSpirit() {
-	for (let i = 0; i < pottenReveal.length; i++) {
+	for (let i = 0; i < pottenReveal2.length; i++) {
 		//	for (let i = 0; i < 1; i++) {
-		const reveal = pottenReveal[i]
+		const reveal = pottenReveal2[i]
 		const revealQuestion = reveal.querySelector(".question")
 		const revealAnswer = reveal.querySelector(".answer")
 		const question = questionsSpirits[i]
@@ -193,9 +206,9 @@ function renderElementsSpirit() {
 }
 
 function renderElementsFood() {
-	for (let i = 0; i < pottenReveal.length; i++) {
+	for (let i = 0; i < pottenReveal3.length; i++) {
 		//	for (let i = 0; i < 1; i++) {
-		const reveal = pottenReveal[i]
+		const reveal = pottenReveal3[i]
 		const revealQuestion = reveal.querySelector(".question")
 		const revealAnswer = reveal.querySelector(".answer")
 		const question = questionsFood[i]
@@ -215,9 +228,9 @@ function renderElementsFood() {
 }
 
 function renderElementsPrice() {
-	for (let i = 0; i < pottenReveal.length; i++) {
+	for (let i = 0; i < pottenReveal4.length; i++) {
 		//	for (let i = 0; i < 1; i++) {
-		const reveal = pottenReveal[i]
+		const reveal = pottenReveal4[i]
 		const revealQuestion = reveal.querySelector(".question")
 		const revealAnswer = reveal.querySelector(".answer")
 		const question = questionsPrice[i]
@@ -235,6 +248,14 @@ function renderElementsPrice() {
 		})
 	}
 }
+
+function toggle_visibility(e) {
+       var e = document.querySelector(".gameboard .value");
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'none';
+    }
 
 
 

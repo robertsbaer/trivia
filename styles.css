@@ -41,6 +41,34 @@ body{
 	text-align: center;
 	background-color: rgba(14,37,162,1);
 }
+.gameboard1{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	text-align: center;
+	background-color: rgba(14,37,162,1);
+}
+.gameboard2{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	text-align: center;
+	background-color: rgba(14,37,162,1);
+}
+.gameboard3{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	text-align: center;
+	background-color: rgba(14,37,162,1);
+}
+.gameboard4{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	text-align: center;
+	background-color: rgba(14,37,162,1);
+}
 
 .category{
 	width: 100%;
@@ -50,7 +78,7 @@ body{
 
 .reveal{
 	width: 100%;
-	height: 190px;;
+	height: 230px;
 	background-color: rgba(14,37,162,1);
 	display: block;
 }
